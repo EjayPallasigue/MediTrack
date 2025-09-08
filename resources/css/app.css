@@ -1,0 +1,30 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source "../**/*.blade.php";
+@source "../**/*.js";
+@source "../**/*.vue";
+
+@theme {
+    --font-sans: Figtree, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        'Noto Color Emoji';
+    /* MediTrack brand */
+    --color-brand: #B54C3D;
+    --color-brand-dark: #7A2F25;
+    --color-brand-accent: #D36B5B;
+    --color-white: #FFFFFF;
+}
+
+/* Utility helpers for brand (optional if you prefer tailwind classes directly) */
+.btn-brand {
+    @apply inline-flex items-center justify-center rounded-md bg-brand text-white px-4 py-2 font-medium shadow-sm hover:bg-brand-dark focus:outline-none focus:ring-2 focus:ring-brand/30;
+}
+
+.btn-secondary {
+    @apply inline-flex items-center justify-center rounded-md bg-gray-200 text-gray-800 px-4 py-2 font-medium shadow-sm hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500/30;
+}
+
+.btn-danger {
+    @apply inline-flex items-center justify-center rounded-md bg-red-600 text-white px-4 py-2 font-medium shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500/30;
+}
